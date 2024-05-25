@@ -248,7 +248,6 @@ extension LoginViewModel {
         }
     }
     
-    
     // MARK: - 파이어베이스
     /// 파이어베이스 유저 정보 획득
     func getFirebaseUserInfo(user: FirebaseAuth.User){

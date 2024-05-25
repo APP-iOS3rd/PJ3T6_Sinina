@@ -251,7 +251,7 @@ extension LoginViewModel {
     
     // MARK: - 파이어베이스
     /// 파이어베이스 유저 정보 획득
-    func getFirebaseUserInfo(user: FirebaseAuth.User) {
+    func getFirebaseUserInfo(user: FirebaseAuth.User){
         let email = user.email ?? ""
         let imgURL = user.photoURL?.absoluteString ?? ""
         let userName = user.displayName ?? ""

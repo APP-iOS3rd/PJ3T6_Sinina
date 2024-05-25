@@ -30,7 +30,7 @@ struct ManagerChatView: View {
         }
         .onAppear(){
             // 모든 안읽은 메세지 수는 0
-            chatVM.unreadMsgCnt = 0
+            //chatVM.unreadMsgCnt = 0
             chatVM.db.collection("chatRoom").document(room.userEmail).updateData(["unreadMsgCnt": 0])
             
             // 모든 메세지 읽음 처리

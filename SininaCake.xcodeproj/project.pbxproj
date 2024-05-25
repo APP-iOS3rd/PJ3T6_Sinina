@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		234ABD892B6A2C4E007199E2 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		234ABD8B2B6A3BBB007199E2 /* (null) in Sources */ = {isa = PBXBuildFile; };
-		235E2BBC2B8C86EB00E219EE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 235E2BBA2B8C86EB00E219EE /* GoogleService-Info.plist */; };
 		2367639C2B6691DC008C8244 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		2367639E2B66BF8D008C8244 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		236763A42B67AE57008C8244 /* (null) in Sources */ = {isa = PBXBuildFile; };
@@ -21,6 +20,7 @@
 		23C35EA72B7D9A7B00A61406 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C35EA62B7D9A7B00A61406 /* ImagePicker.swift */; };
 		23D682992B7380A400A2036A /* FirebaseManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D682982B7380A400A2036A /* FirebaseManger.swift */; };
 		23D682D42B738A0200A2036A /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D682D32B738A0200A2036A /* Date.swift */; };
+		23DC676F2BFB8BB600D16214 /* GoogleService-Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = 23DC676E2BFB8BB200D16214 /* GoogleService-Info.plist */; };
 		3B6720BC2B85F6610008F462 /* HomeCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6720BB2B85F6610008F462 /* HomeCalendarView.swift */; };
 		3BD583C12B831A3A00861F92 /* ManagerCalendarListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD583C02B831A3A00861F92 /* ManagerCalendarListViewModel.swift */; };
 		3BD583C32B831B1900861F92 /* ManagerCalendarListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD583C22B831B1900861F92 /* ManagerCalendarListView.swift */; };
@@ -127,8 +127,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		235E2BB92B8C86EA00E219EE /* ApiKeys.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = ApiKeys.xcconfig; sourceTree = "<group>"; };
-		235E2BBA2B8C86EB00E219EE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		23C35E902B7CE42F00A61406 /* ChatRoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatRoom.swift; sourceTree = "<group>"; };
 		23C35E922B7CE42F00A61406 /* CustomerChatView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerChatView.swift; sourceTree = "<group>"; };
 		23C35E932B7CE42F00A61406 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
@@ -137,6 +135,8 @@
 		23C35EA62B7D9A7B00A61406 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		23D682982B7380A400A2036A /* FirebaseManger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseManger.swift; sourceTree = "<group>"; };
 		23D682D32B738A0200A2036A /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		23DC676D2BFB8BAD00D16214 /* ApiKeys.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ApiKeys.xcconfig; sourceTree = "<group>"; };
+		23DC676E2BFB8BB200D16214 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		38951A1BE2E0F9CD6200F179 /* Pods-SininaCake.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SininaCake.debug.xcconfig"; path = "Target Support Files/Pods-SininaCake/Pods-SininaCake.debug.xcconfig"; sourceTree = "<group>"; };
 		3B6720BB2B85F6610008F462 /* HomeCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCalendarView.swift; sourceTree = "<group>"; };
 		3BD583C02B831A3A00861F92 /* ManagerCalendarListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerCalendarListViewModel.swift; sourceTree = "<group>"; };
@@ -282,11 +282,11 @@
 		8E874B9D2B00B37200ECEF08 /* SininaCake */ = {
 			isa = PBXGroup;
 			children = (
+				23DC676D2BFB8BAD00D16214 /* ApiKeys.xcconfig */,
+				23DC676E2BFB8BB200D16214 /* GoogleService-Info.plist */,
 				9AC122FC2B73C6C600DC9A42 /* Assets.xcassets */,
 				9AC123022B73D30C00DC9A42 /* Preview Content */,
 				8EC21AC02B5906AF00E92DA7 /* SininaCake.entitlements */,
-				235E2BB92B8C86EA00E219EE /* ApiKeys.xcconfig */,
-				235E2BBA2B8C86EB00E219EE /* GoogleService-Info.plist */,
 				8ECB21B22B1DC05E003BF8B0 /* Info.plist */,
 				8E874B9E2B00B37200ECEF08 /* SininaCakeApp.swift */,
 				9AEACEB12B6255DE00AE041F /* Utilities.swift */,
@@ -678,7 +678,6 @@
 			files = (
 				9AC123032B73D30C00DC9A42 /* Preview Content in Resources */,
 				8ECB21B02B1DC00A003BF8B0 /* Pretendard-SemiBold.otf in Resources */,
-				235E2BBC2B8C86EB00E219EE /* GoogleService-Info.plist in Resources */,
 				8ECB21AB2B1DC00A003BF8B0 /* Pretendard-ExtraLight.otf in Resources */,
 				8ECB21AF2B1DC00A003BF8B0 /* Pretendard-Bold.otf in Resources */,
 				8ECB21AC2B1DC00A003BF8B0 /* Pretendard-ExtraBold.otf in Resources */,
@@ -740,6 +739,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23DC676F2BFB8BB600D16214 /* GoogleService-Info.plist in Sources */,
 				8E874BAD2B00B40D00ECEF08 /* LoginView.swift in Sources */,
 				8ECF5FB12B54C1C300D6BCF6 /* HomeView.swift in Sources */,
 				8ECF5FCB2B54EE8A00D6BCF6 /* CautionViewModel.swift in Sources */,
@@ -809,7 +809,6 @@
 /* Begin XCBuildConfiguration section */
 		8E874BA72B00B37400ECEF08 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 235E2BB92B8C86EA00E219EE /* ApiKeys.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -873,7 +872,6 @@
 		};
 		8E874BA82B00B37400ECEF08 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 235E2BB92B8C86EA00E219EE /* ApiKeys.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;

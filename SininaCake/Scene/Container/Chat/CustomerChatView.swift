@@ -54,7 +54,6 @@ struct CustomerChatView: View {
                                     grayMessageBubble(message: msg)
                                         .id(msg.id)
                                 }
-                                
                             }
                             .background(Color.clear)
                             .onChange(of: chatVM.lastMessageId){ id in
@@ -139,6 +138,7 @@ struct CustomerChatView: View {
                     
                 } else {
                     let msg = Message(text: chatText, userEmail: loginVM.loginUserEmail ?? "", timestamp: Date(), viewed: false)
+                    
                     chatVM.sendMessage(chatRoom: room, message: msg)
                     for token in chatVM.managerDeviceToken {
                         fcmServerAPI.sendFCM(deviceToken: token, title: room.userEmail, body: chatText)
@@ -168,7 +168,7 @@ struct CustomerChatView: View {
     // MARK: - 파란 말풍선
     private func blueMessageBubble(message: Message) -> some View {
         HStack {
-            
+            // MARK: - 메세지 읽지 않은 경우
             if message.viewed == false {
                 CustomText(title: "1", textColor: .customBlue, textWeight: .regular, textSize: 12)
             }

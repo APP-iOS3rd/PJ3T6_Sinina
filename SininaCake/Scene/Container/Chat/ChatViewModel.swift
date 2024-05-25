@@ -98,25 +98,34 @@ class ChatViewModel: ObservableObject{
                 }
 
                 snapshot.documentChanges.forEach { diff in
-                    if (diff.type == .added) {
+                    // 추가된 것만 따져서?
+                    if (diff.type == .added || diff.type == .modified) {
                         if let data = try? diff.document.data(as: Message.self) {
                             
                             if self.messages[chatRoom.id] == nil {
-                                self.messages[chatRoom.id] = [data]
+                                self.messages[chatRoom.id] = [data] // 새 채팅 생김
                             } else {
-                                self.messages[chatRoom.id]??.append(data)
+                                self.messages[chatRoom.id]??.append(data) // 있던 방에 채팅 추가
                             }
                             
+                            // 값이 업데이트가 된 경우
+                            if diff.type == .modified {
+                                self.messages[chatRoom.id] = self.updateChatRoom(message: (self.messages[chatRoom.id] ?? nil) ?? [], diff: data)
+                            }
+                            // 시간 순에 따라 버블 정렬
                             self.messages[chatRoom.id]??.sort { $0.timestamp < $1.timestamp }
                             
+                            // 마지막 아이디 기억
                             if let id = self.messages[chatRoom.id]??.last?.id {
                                 self.lastMessageId = id
                             }
                             
+                            // 마지막 메세지 기억
                             if let lastMessageText = self.messages[chatRoom.id]??.last?.text {
                                 self.lastMessageText[chatRoom.id] = lastMessageText
                             }
-
+                            
+                            // 마지막 메세지 시간 기억
                             if let lastMessageTimestamp = self.messages[chatRoom.id]??.last?.timestamp.formattedDate() {
                                 self.lastMessageTimestamp[chatRoom.id] = lastMessageTimestamp
                             }
@@ -125,6 +134,19 @@ class ChatViewModel: ObservableObject{
                 }
         }
         listeners.append(listener!)
+    }
+    
+    ///self.chattings의 채팅 내용을 업데이트 해주는 코드
+    ///사용처 : 읽음처리
+    private func updateChatRoom(message: [Message], diff: Message) -> [Message] {
+        var tempMsg = message
+        
+        ///id로 찾아서 바꿔주기
+        if let index = message.firstIndex(where: { $0.id == diff.id }) {
+            tempMsg[index] = diff
+        }
+        
+        return tempMsg
     }
     
     func sendMessage(chatRoom: ChatRoom?, message: Message) {
